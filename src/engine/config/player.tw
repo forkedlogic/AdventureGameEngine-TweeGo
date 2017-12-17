@@ -1,0 +1,7 @@
+:: player
+
+<<set $player = {
+"name": "Bob",
+"curRoom": null,
+"description": true
+}>>

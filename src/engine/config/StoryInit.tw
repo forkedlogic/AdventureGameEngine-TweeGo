@@ -1,0 +1,15 @@
+:: StoryInit
+
+/* Leave the includes or else bad stuff will happen! Setup your game in the GameSetup passage instead */
+
+<<include config>>
+<<include player>>
+
+<<if $config.energy == true>>
+	<<include energy>>
+<</if>>
+<<if $config.money == true>>
+	<<include money>>
+<</if>>
+
+<<include GameSetup>>

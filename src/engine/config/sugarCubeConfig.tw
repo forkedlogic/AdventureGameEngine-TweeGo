@@ -1,0 +1,17 @@
+:: SugarCube configuration [script]
+
+
+/* Main SugarCube configuration file. */
+
+/* Change the starting passage from the default 'start' to [whatever]. */
+Config.passages.start = "Start";
+
+/* Disable forward/back buttons in panel. */
+Config.history.controls = true;
+
+/* Save only one game state. */
+Config.history.maxStates = 0;
+
+/* Set to 'true' to enable SugarCube's debug mode.
+Note: This is an 'engine level' debug mode, completely separate from the game's debug mode. */
+Config.debug = false;

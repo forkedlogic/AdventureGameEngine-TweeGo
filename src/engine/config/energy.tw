@@ -1,0 +1,9 @@
+:: energy
+
+<<set $energy = {
+	"max": 100,
+	"current": 100,
+	"day" : 1,
+	"cost": 5,
+	"collapse": "bedroom"
+}>>

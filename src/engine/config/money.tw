@@ -1,0 +1,6 @@
+:: money
+
+<<set $money = {
+"amount": 0,
+"unit": "$"
+}>>

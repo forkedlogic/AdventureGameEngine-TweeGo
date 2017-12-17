@@ -1,0 +1,28 @@
+:: nav
+<script>$('.grid').masonry({itemSelector: '.grid-item', columnWidth: 250});</script>\
+<b>Exits:</b>
+<<if $config.energy == true>>\
+	<<if $energy.current > 0>>\
+		<<set _room = $rooms[$player.curRoom]>>\
+		<<set _exits = _room.exits>>\
+		<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250 }'>\
+		<<for _i to 0; _i < _exits.length; _i++>>\
+			<<set _exitName = $rooms[_exits[_i]].name>>\
+			<<set _exitTarget =  _exits[_i]>>\
+			<<set _exitImage = $rooms[_exits[_i]].linkimage>>\
+			<<capture _exitTarget>>\
+			<<if _exitImage == "none">>\
+				<div class="grid-item">- <<link [[_exitName|room]]>><<player setroom _exitTarget>><</link>></div>\
+			<<else>>\
+				<div class="grid-item grid-item-image"><<link [img[_exitName|_exitImage][room]]>><<player setroom _exitTarget>><</link>><br><span class="navimg_title">_exitName</span></div>\
+			<</if>>\
+			<</capture>>\
+		<</for>>\
+		</div>
+	<<else>>\
+		You are too tired to do anything more today.
+		<<if $player.curRoom != $energy.collapse>>\
+			- <<link [[Back|room]]>><<player setroom $energy.collapse>>	<</link>>
+		<</if>>\
+	<</if>>\
+<</if>>\

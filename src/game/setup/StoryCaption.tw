@@ -1,0 +1,25 @@
+:: StoryCaption
+<b>Player</b>
+<<if $player.description == true>>\
+[[$player.name|player_description]]
+<<else>>\
+<<print $player.name>>
+<</if>>\
+
+<b>Room</b>
+<<print $rooms[$player.curRoom].name>>
+
+<b>Inventory</b>
+<<invSort>>\
+<<inventory>>
+
+<<if $config.money == true>>\
+<b>Money</b>
+<<print $money.unit>><<print $money.amount>>
+<</if>>\
+
+<<if $config.energy == true>>\
+<b>Energy</b>
+Energy: <<print $energy.current>>
+Day: <<print $energy.day>>
+<</if>>\

@@ -1,0 +1,21 @@
+:: chars
+<script>$('.grid').masonry({itemSelector: '.grid-item', columnWidth: 250});</script>\
+<b>Characters:</b>
+<<set _room = $rooms[$player.curRoom]>>\
+<<set _characters = _room.characters>>\
+<<if _characters.length == 0>>\
+- None
+<<else>>\
+<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 250}'>\
+<<for _x = 0; _x < _characters.length; _x++>>\
+	<<set _examine = _characters[_x].id + "_examine">>\
+	<<set _name = _characters[_x].name>>\
+	<<set _image = _characters[_x].image>>\
+	<<if _image == "none">>\
+		<div class="grid-item">- [[_name|_examine]]</div>
+	<<else>>\
+		<div class="grid-item grid-item-image">[img[_name|_image][_examine]]<br><span class="charimg_title">_name</span></div>
+	<</if>>\
+<</for>>\
+</div>\
+<</if>>\

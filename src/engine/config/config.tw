@@ -1,0 +1,15 @@
+:: config
+
+<<set $config = {
+"energy": true,
+"money": true
+}>>
+
+<<set $rooms = {
+}>>
+
+<<set $items = {
+}>>
+
+<<set $characters = {
+}>>

@@ -1,0 +1,21 @@
+:: room
+<<silently>>\
+<<set _room = $rooms[$player.curRoom]>>
+<<set _title = _room.id + "_title">>
+<<set _description = _room.id + "_description">>
+<</silently>>\
+<h1><<include _title>></h1>\
+<<if _room.image == true>>\
+	<<set _image = _room.id + "_image">>\
+	<span class="viewport">
+		<<include _image>>\
+	</span>
+<</if>>
+<<include _description>>\
+
+
+<<include chars>>\
+
+<<include item>>\
+
+<<include nav>>\
