@@ -1,0 +1,10 @@
+:: character_examine
+A character.
+
+<<character talk "character">>
+<<back>>
+
+:: character_dialog_conversation
+Hello!
+
+<<back>>

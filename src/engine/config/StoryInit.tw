@@ -13,3 +13,6 @@
 <</if>>
 
 <<include GameSetup>>
+
+:: StorySettings
+ifid:8c8a169c-fa4e-4119-b838-18ce6420f83a

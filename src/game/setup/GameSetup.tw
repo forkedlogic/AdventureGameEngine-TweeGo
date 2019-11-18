@@ -1,3 +1,37 @@
 :: GameSetup
 
 /* Put your variable setup here and NOT in StoryInit */
+
+/* Initialize Rooms */
+<<room init "room">>
+<<room setname "room" "Room">>
+<<room image "room" false>>
+
+<<room init "hallway">>
+<<room setname "hallway" "Hallway">>
+<<room image "hallway" false>>
+
+/* Add exits */
+<<room addexit "room" "hallway">>
+<<room addexit "hallway" "room">>
+
+/* Setup the player. */
+<<player setroom "room">>
+
+/* Initialize Items */
+<<item init "item">>
+<<item setname "item" "Item">>
+
+/* Add Items to Rooms */
+<<room additem "room" "item">>
+
+/* Initialize Characters */
+<<character init "character">>
+<<character setname "character" "Character">>
+
+/* Place Characters in Rooms*/
+<<character move "character" "room">>
+
+/* Initialize Character Conversations*/
+<<character conversation "character" "dialog">>
+
