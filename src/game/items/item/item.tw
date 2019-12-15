@@ -1,0 +1,6 @@
+:: item_examine
+An item.
+
+<<linkreplace "Pick Up">><<pickup "item">><</linkreplace>>
+
+<<return>>

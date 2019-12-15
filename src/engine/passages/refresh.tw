@@ -1,0 +1,9 @@
+/*  Passage Refresh Widget
+    Description:
+        Simple widget to refresh the current passage.
+    Options:
+    Use:
+        <<refresh>>
+*/
+:: Refresh Widget [widget nobr]
+<<widget "refresh">><<set _passage to passage()>><<goto _passage>><</widget>>
